@@ -1,0 +1,17 @@
+Realisé par: malak baha 
+ETUDIANTE EN : IAPs4  
+Groupe :1 
+
+PROJET HOTEL  - ALGÈBRE RELATIONNELLE 
+- Liste des réservations avec nom du client et ville de l'hôtel 
+π id, nom, ville (Reservation ⨝ Client ⨝ Chambre ⨝ Hotel)
+-Les clients qui habitent à Paris 
+σ ville = 'Paris' (Client) 
+- Nombre de réservations par client 
+client_id γ COUNT(id)→nb_reservations (Reservation) 
+- Nombre de chambres par type de chambre 
+type_id γ COUNT(id)→nb_chambres (Chambre) 
+- Chambres non réservées pour une période donnée (ex. entre '2025-07-10' et '2025
+07-15') 
+Chambre  π chambre_id (σ date_debut ≤ '2025-07-15' ∧ date_fin ≥ '2025-07-10' 
+(Reservation)) """
